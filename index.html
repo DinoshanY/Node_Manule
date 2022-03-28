@@ -1,0 +1,201 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Master.css" />
+  <title>Lag En Todolist Med mongoDB</title>
+</head>
+
+<body>
+  <div class="fixed">
+    <ul>
+      <li><a href="#chap1">Krav</a></li>
+      <li><a href="#chap2">Data som skal lagres</a></li>
+      <li><a href="#chap3">Express</a></li>
+      <li><a href="#chap4">Bruke express med mogoose</a></li>
+      <li><a href="#chap5">Index.ejs</a></li>
+      <li><a href="#chap6">Er checkboxes checked</a></li>
+      <li><a href="#chap7">yaml fill</a></li>
+      <li><a href="#chap8">start MongoDB server</a></li>
+      <li><a href="#chap9">Intervju med kunndeserice og brukerstøtte</a></li>
+      <li><a href="#chap10">Hjelpe noe med IT probelm</a></li>
+    </ul>
+  </div>
+
+  <div class="TheTitles">
+    <h1>Lag En Todolist Med mongoDB</h1>
+  </div>
+
+  <div class="Content" id="chap1">
+    <h2 class="Titles">Krav</h2>
+    <p>Må ha laget MongoDB, Mongoose lastet ned, basik Mongodb-compass, Express og Ejs Kunnskap</p>
+  </div>
+
+  <div class="Content" id="chap2">
+    <h2 class="Titles">Data som skal lagres</h2>
+    <p>Først lag en models mappe og lag en js fill eksemple Todo.js</p>
+    <p>Når man importer mogoose kan man bruke Mongoose elementer som .Schema og .model</p>
+    <p>.Schema er et document data structor og .model er konstruktører av et skjema og lager en forekomst av et dokument
+      som tilsvarer poster i en database.</p>
+    <div class="Images">
+      <img src="Images/Model.png" alt="model" />
+    </div>
+  </div>
+
+  <div class="Content" id="chap3">
+    <h2 class="Titles">Express:</h2>
+    <p>Først lag en routes mappe og lag en js fill eksemple index.js</p>
+    <p>først inport Router fra express og Todo fra todo.js i models mappen</p>
+    <p>.get for å få alle objektene i DB</p>
+    <p>.post er brukt til å lag en route hvor objecte blir post til siden</p>
+    <p>.patch er brukt itilfele det er en error som visser en feil medlig.</p>
+
+    <div class="Images">
+      <img src="Images/RouteIndex.png" alt="model" />
+    </div>
+  </div>
+
+  <div class="Content" id="chap4">
+    <h2 class="Titles">Bruke express med mogoose</h2>
+    <p>Først lag en js fill dere du lagde de forige mapene eksemple app.js</p>
+    <p>først inport express fra express, mongoose fra mongoose og index fra index.js i routes mappen</p>
+    <p>mongoose.connect kobler coden til en mongoDB</p>
+    <p>.set setter et navn en verdi .set(name, value)</p>
+    <p>.use starter en req eller res function</p>
+    <p>.urlencoded er brukt for psot og put req</p>
+    <p>når .static er active så kan den ta array og object.</p>
+    <p>.listen er brukt til å feste tile spesifik port og host eks Listening on http://localhost:3000</p>
+
+    <div class="Images">
+      <img src="Images/App.png" alt="model" />
+    </div>
+  </div>
+
+  <div class="Content" id="chap5">
+    <h2 class="Titles">Index.ejs:</h2>
+    <p>Først lage en views mappe og lage en ejs fill eks index.ejs</p>
+    <p>lag en normale index me d en for loop for å hvis inholde til todolisten</p>
+    <p>bruke <% %> for å skrive js i Ejs på vær linje der det er js code</p>
+    <div class="Images">
+      <img src="Images/IndexEjs.png" alt="model" />
+    </div>
+  </div>
+
+  <div class="Content" id="chap6">
+    <h2 class="Titles">Er checkboxes checked:</h2>
+    <p>lage en public mappe og en index.js i mappen</p>
+    <p>når en fille er i public mappen blir den set første og blir brukte av index.ejs når den er liket</p>
+    <p>code under er brukt for å lagre hvis boksen cheked eller ikke cheked</p>
+    <p>URLSearchParams er brukt til å formater eventer.cheked til riktig for søkmotoren</p>
+
+    <div class="Images">
+      <img src="Images/PubIndex.png" alt="model" />
+    </div>
+  </div>
+
+  <div class="Content" id="chap7">
+    <h2 class="Titles">yaml fill:</h2>
+    <p>først lagn .yaml fill og gi den et navn eks jav.yaml</p>
+    <file>systemlog brukes til å laggre alt errors og warnigs. destenaion velger hvor mongoDB snender all log output file eller syslog, hvis man velger file må man også ha path file er bedre å bruke en syslog fordi syslog logs medliger anderlerds som kan lage forvriene timestamps og path velger hvor dan skal lagres</p>
+    <p>storage er brukt til lagre data, journal er brukt så data er vaildert og recoverbel men det er bare active vis en dbPath er spcifyed</p>
+    <p>net er brukt for å speifisere en ip og port, bindIp er brukt for å speifisere ip</p>
+    <div class="Images">
+      <img src="Images/yaml.png" alt="model" />
+    </div>
+  </div>
+
+  <div class="Content" id="chap8">
+    <h2 class="Titles">start MongoDB server:</h2>
+    <p>mongod --config ./jav.yaml</p>
+    <div class="Images">
+      <img src="Images/mongod.png" alt="model" />
+    </div>
+    <p>nye terminal ok skrive npm start</p>
+    <div class="Images">
+      <img src="Images/npm.png" alt="model" />
+    </div>
+
+  </div>
+
+  <div class="Content" id="chap9">
+    <h2 class="Titles">Intervju med kunndeserice og brukerstøtte</h2>
+    <table>
+      <tr>
+        <th>Kunndeserice</th>
+        <th>Svar</th>
+      </tr>
+
+      <tr>
+        <td>Hva er det beste med ditt yrke?</td>
+        <td>Snakke med kunder og hjelpe dem</td>
+      </tr>
+
+      <tr>
+        <td>Hva er det værste med ditt yrke</td>
+        <td>Frekke kunder</td>
+      </tr>
+
+      <tr>
+        <td>Hva hav den værste oppleveste med en kunde du har hat?</td>
+        <td>Ikke noe</td>
+      </tr>
+
+      <tr>
+        <td>Hvilken utdanning tok du?</td>
+        <td>Studie spesialiserig og Fagbrev</td>
+      </tr>
+
+      <tr>
+        <td>Hvorfor velget du denne jobben?</td>
+        <td>Det var spennene</td>
+      </tr>
+
+    </table>
+    <table>
+      <tr>
+        <th>brukerstøtte</th>
+        <th>Svar</th>
+      </tr>
+
+      <tr>
+        <td>Hva er det beste med ditt yrke?</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Hva er det værste med ditt yrke</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Hva hav den værste oppleveste med en kunde du har hat?</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Hvilken utdanning tok du?</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Hvorfor velget du denne jobben?</td>
+        <td></td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div class="Content" id="chap10">
+    <h2 class="Titles">Hjelpe noe med IT probelm:</h2>
+    <p>Moren min hadde probelm med to laptoper som hun ville bli windows 10</p>
+    <p>Så jeg brukte Rufus og butten laptopene med windows 10</p>
+    <p>Moren min sin reviwe var "Jeg synes det var lit bra"</p>
+  </div>
+
+
+  </div>
+</body>
+
+</html>
